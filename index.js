@@ -32,7 +32,7 @@ con.connect(function(err) {
   }
 
   console.log('Connected to database.');
-  app.listen(process.env.PORT, process.env.HOST);
+  app.listen(process.env.PORT);
   console.log("Listening at port " + process.env.PORT);
 // con.end();
 });
@@ -93,7 +93,7 @@ app.post("/signUp",(req,res)=>{
 		con.query(query,(err,result,fields)=>{
 			if (err){
 				console.log("#Error:",err);
-				res.json({result:err, status:0});
+				res.json({result:err, status:-1});
 			} 
 			if (result){
 				console.log("Result",result);
@@ -124,3 +124,4 @@ app.post("/booking",(req,res)=>{
 	})
 	
 })
+

@@ -44,10 +44,10 @@
             </div>
           </form>
           <div id="details" class="p-5 text-blue-600 text-center">
-            <% if(status){  %>
+            <% if(status == 1){  %>
               <p>Booking Succuessfully. Tickets details will be sent to your mail. </p>
               <p>Reference ID: <%= status.id %></p>
-            <% }else{ %>
+            <% }else if(status == -1){ %>
               <p>Something went wrong. Try Again !!!</p>
             <% } %>  
           </div>
